@@ -1,0 +1,279 @@
+body {
+    background-color: #dfdfdf;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'MontReg';
+    width: 100%;
+}
+
+/* Навигационная панель */
+.nav {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    background-color: black;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    border-bottom: solid 1px rgb(209, 179, 110);
+}
+
+.logo{
+    width: 70%;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(209, 179, 110);
+    margin: 20% 100px 0 100px;
+    transition: 0.5s;
+}
+
+.nav a:hover {
+    color: #dfdfdf;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.menu{
+    display: none;
+    width: 100%;
+}
+
+/* Заголовок */
+.header {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'MontLight';
+}
+
+.main {
+    
+}
+
+/*Секция с текстом  */
+
+.section>p>span {
+    font-weight: bold
+}
+.section {
+    margin: 0 0 0 5%;
+}
+
+[class^="section_p"] {
+    width: 25%;
+}
+
+.section_p1 {
+    position: relative;
+    left: 10%;
+}
+
+.section_p2 {
+    position: relative;
+    left: 35%;
+}
+
+.section_p3 {
+    position: relative;
+    left: 60%;
+}
+
+/* Секция с боксами*/
+.type {
+    margin: 0 0 0 5%;
+}
+.section_box {
+    margin: 0 0 5% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section_box p {
+    margin-bottom: 50px;
+    height: 30%;
+}
+
+[class^="box"] {
+    border: solid rgb(129, 129, 129) 1px;
+    width: 60%;
+    padding: 10%;
+    margin-bottom: 10%;
+}
+
+.section_box img {
+    width: 70%;
+    height: 40%;
+}
+.but_choice {
+    margin-bottom: 30%;
+
+}
+.but_choice {
+    text-decoration: none;
+    border: solid 0.5px black;
+    padding: 7%;
+    color: black;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+.but_choice:hover {
+    background-color: black;
+    color: rgb(209, 179, 110);
+    transition: 0.5s;
+}
+
+/* Секция информации*/
+.section_info {
+    margin-left: 7%;
+}
+
+.section_info span {
+    font-weight: bold;
+}
+
+/* Оформление заказа */
+.order {
+    margin: 50px 0 80px 0;
+    text-align: center;
+
+}
+
+.order a {
+    border: solid 1px rgb(129, 129, 129);
+    padding: 1.2em;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    transition: 0.8s;
+}
+
+.order a:hover {
+    border: solid 1px rgb(209, 179, 110);
+    color: rgb(209, 179, 110);
+    background-color: black;
+    transition: 0.8s;
+
+}
+
+.order a:hover .truck {
+    opacity: 0.0;
+    transition: 0.8s;
+
+}
+
+
+
+
+.order img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.truck {
+    position: absolute;
+    transition: 0.8s;
+}
+
+/* Footer */
+.footer {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    background-color: black;
+    height: auto;
+    width: 100%;
+    color: rgb(209, 179, 110);
+}
+
+
+.footer img {
+    width: 5%;
+    margin: 8px 5px 0 10px;
+}
+
+.footer a {
+    color: rgb(209, 179, 110);
+}
+.left_foot {
+    display: grid;
+}
+.center_foot {}
+
+.right_foot {
+    font-size: 10px;
+}
+
+
+
+/* обычный */
+@font-face {
+    font-family: 'MontReg';
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+/* тонкий */
+@font-face {
+    font-family: 'MontLight';
+    src: url(/fonts/Montserrat-Light.ttf);
+}
+
+
+/* На мобильных устройствах */
+@media (max-width: 500px) {
+    .nav {
+        grid-template-columns: 80% 20%;
+    }
+    .menu {
+        display: block;
+        width: 50%;
+        padding: 20%;
+        padding-left: 25%;
+    }
+    .logo {
+        width: 40%;
+    }
+    
+
+    .nav a {
+        display: none;
+    }
+
+    
+
+    .section_box {
+        grid-template-columns: 1fr;
+    }
+
+    * {
+        font-size: 0.9em;
+    }
+
+    [class^="section_p"] {
+        position: relative;
+        left: 0;
+    }
+    
+    
+    [class^="section_p"] {
+        width: 100%;
+    }
+    .footer {
+        font-size: 0.5em;
+    }
+    .right_foot p{
+        font-size: 0.4em
+    }
+    .truck{
+        display: none;
+    }
+
+    .yellow_truck {
+        display: none;
+    }
+    .order a{
+        font-size: 2em;
+    }
+}
+
+
+
